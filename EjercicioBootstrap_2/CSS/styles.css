@@ -384,8 +384,8 @@ input:not(:checked)+label+.ci {
 }
 
 /* CARDS */
-#cards, #layouts, #deportes{
-  max-width: 1400px;
+#cards, #layouts, #deportes, #tecnologia{
+  max-width: 1600px;
   margin: auto;
 }
 
@@ -395,12 +395,12 @@ input:not(:checked)+label+.ci {
   padding: 0;
   margin: 20px 0px;
   background: rgba( 255, 255, 255, 0.5 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 12px );
--webkit-backdrop-filter: blur( 12px );
-border-radius: 10px;
-overflow: hidden;
-transition: 0.3s all ease-in-out;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 12px );
+  -webkit-backdrop-filter: blur( 12px );
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
 }
 
 .card h5{
@@ -417,7 +417,7 @@ transition: 0.3s all ease-in-out;
   height: auto;
 }
 
-#layouts img{
+#layouts img, #tecnologia img{
   border-radius: 5px;
 }
 
