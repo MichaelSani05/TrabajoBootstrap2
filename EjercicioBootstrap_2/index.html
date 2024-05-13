@@ -415,16 +415,21 @@
       document.addEventListener('DOMContentLoaded', function() {
         const menuDisplayer = document.getElementById("display-menu");
         const menu = document.getElementById("main-menu");
-        const weatherContainer = document.getElementById("weatherContainer");
         let isMenuDisplayed = false;
-        let animate = false;
         
         menuDisplayer.addEventListener('click', function(){
           if (!isMenuDisplayed){
             menu.style.height = '234px';
+            setTimeout(function() {
+              if (menu.style.height == '234px') {
+                menu.style.overflow = 'visible';
+              }
+            }, 1000);
             isMenuDisplayed = true;
+            
           } else{
             menu.style.height = '0px';
+            menu.style.overflow = 'hidden';
             isMenuDisplayed = false;
           }
         });
