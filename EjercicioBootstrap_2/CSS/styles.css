@@ -2,6 +2,8 @@ body{
 	margin: 0;
 	width: 100%;
 	overflow-x: hidden;
+  background-image: url("../IMG/newspaper-background-2.png");
+  background-size: 200px;
 }
 
 #real-main-content{
@@ -32,7 +34,7 @@ nav{
 #main-menu{
   display: flex;
   height: auto;
-  transition: all 0.2s ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 header{
@@ -44,6 +46,7 @@ header{
 .dropdown .wave{
   margin-bottom: 20px;
   position: absolute;
+  height: 20px;
 }
 
 .dropdown{
@@ -67,14 +70,12 @@ header{
 }
 
 .dropdown:hover .submenu{
-  display: block;
   transition: 0.3s all ease-in-out;
-  opacity: 1;
+  display: block;
 }
 
 .submenu, .submenu2{
   display: none;
-  opacity: 0;
   list-style: none;
   background-color: lightgrey;
   border-radius: 5px;
@@ -83,11 +84,25 @@ header{
   z-index: 999;
   padding: 0;
   width: 100%;
+  left: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.submenu1-item, .submenu2-item{
+.dropdown-item{
   padding: 10px 20px;
-  margin: 0;
+}
+
+.submenu2-item{
+  padding: 10px 30px;
+}
+
+.submenu2 .dropdown-item{
+  padding: 0px;
+}
+
+
+.submenu1-item, .submenu2-item{
+  margin: 0px;
   color: #504a4a;
   position: relative;
 }
@@ -108,21 +123,17 @@ header{
   font-weight: bold;
 }
 
-
 .submenu2{
   left: 90%;
   top: 0;
   transition: 0.3s all ease-in-out;
   background-color: white;
-  box-shadow: 3px 3px 3px black; 
-  display: none;
+  box-shadow: 3px 3px 3px black;
   opacity: 1;
   z-index: 999999;
-}
-
-.submenu3{
-  left: -100% !important;
-  box-shadow: -3px 3px 3px black !important;
+  display: block;
+  overflow: hidden;
+  position: absolute;
 }
 
 .submenu2 a{
@@ -131,7 +142,11 @@ header{
 }
 
 .submenu1-item:hover .submenu2{
-  display: block !important;
+  display: block;
+}
+
+.submenu1-item:not(:hover) .submenu2{
+  height: 0px;
 }
 
 .submenu2:hover{
@@ -150,7 +165,6 @@ header{
   position: fixed;
   background-color: #f0f0f0;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 120px 20px;
   padding: 20px;
   text-align: center;
@@ -162,22 +176,20 @@ header{
   8.5px 9.3px 10px rgba(0, 0, 0, 0.115),
   15.2px 16.5px 17.9px rgba(0, 0, 0, 0.137),
   28.4px 30.9px 33.4px rgba(0, 0, 0, 0.165),
-  68px 74px 80px rgba(0, 0, 0, 0.23)
-;
+  68px 74px 80px rgba(0, 0, 0, 0.23);
   background: rgba( 255, 255, 255, 0.5 );
-backdrop-filter: blur( 7.5px );
--webkit-backdrop-filter: blur( 7.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
-.weather-container i{
-  position: absolute; 
-  right: 30px; 
-  font-size: 19pt; 
-  color: rgb(2, 91, 192);
+.weather-container img{
+  position: absolute;
+  top: 5px;
+  right: 22px;
 }
 
 /* Estilos para el botón */
@@ -550,7 +562,11 @@ transition: 0.3s all ease-in-out;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
+
+  .dropdown:hover .submenu{
+    height: auto;
+  }
 
   #display-menu{
     display: block;
@@ -567,7 +583,7 @@ transition: 0.3s all ease-in-out;
   }
 
   .dropdown{
-    margin-top: 20px;
+    margin: 20px 0px;
   }
 
   header{
@@ -576,9 +592,36 @@ transition: 0.3s all ease-in-out;
     align-items: center;
   }
 
+  .submenu, .submenu2{
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .submenu2{
+    height: 0px;
+    left: 0;
+    top: 100%;
+  }
+
+  .submenu1-item{
+    margin-left: 20px;
+  }
+
+  .submenu1-item:hover .submenu2{
+    height: 132px !important;
+    position: relative;
+  }
+
 }
 
 /* ANIMACIONES */
+
+/* DISPLAY MENU */
+@keyframes display-menu{
+  0%{
+    
+  }
+}
 
 /* WAVE BACKGROUND */
 @keyframes gradient {
