@@ -311,7 +311,7 @@ main{
 }
 
 .ci:hover{
-  background-position: 0px -100px;
+  transform: scale(1.1);
 }
 
 .ci img {
@@ -617,11 +617,6 @@ input:not(:checked)+label+.ci {
 /* ANIMACIONES */
 
 /* DISPLAY MENU */
-@keyframes display-menu{
-  0%{
-    
-  }
-}
 
 /* WAVE BACKGROUND */
 @keyframes gradient {
