@@ -323,33 +323,49 @@
               <h1>Tecnología</h1>
             </div>
 
-            <div id="tecnologia" class="d-flex justify-content-evenly row col-12">
-              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-row">
+            <div id="cultura3" class="d-flex justify-content-evenly row col-12">
+              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-column cartita">
                 <img class="col-4" src="IMG/img-tecnologia-1.jpg" alt="Card image cap">
-                <div class="card-body col-10">
+                <div class="card-body col-10 ml-5">
                   <h5 class="card-title">Investigadores desarrollan un algoritmo de inteligencia artificial capaz de predecir brotes de enfermedades</h5>
                   <p class="card-text">Científicos presentan un nuevo algoritmo de IA que utiliza datos epidemiológicos y de redes sociales para prever la propagación de enfermedades infecciosas, mejorando la capacidad de respuesta ante brotes de salud pública.</p>
                 </div>
+                <div onclick="scrollOnArrow(0)" class="arrow-scroll animate__animated animate__pulse animate__infinite">
+                  <h4>Leer artículo</h4>
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
               </div>
-              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-row">
+              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-column cartita">
                 <img class="col-4" src="IMG/img-tecnologia-2.gif" alt="Card image cap">
-                <div class="card-body col-10">
+                <div class="card-body col-10 ml-5">
                   <h5 class="card-title">Compañía de automóviles anuncia planes para producir vehículos eléctricos con carga ultrarrápida</h5>
                   <p class="card-text">Descripción: Un fabricante de automóviles revela su estrategia para la próxima generación de vehículos eléctricos, que incluirá tecnología de carga ultrarrápida que reduce significativamente el tiempo de recarga de las baterías.</p>
                 </div>
+                <div onclick="scrollOnArrow(1)" class="arrow-scroll animate__animated animate__pulse animate__infinite">
+                  <h4>Leer artículo</h4>
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
               </div>
-              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-row">
+              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-column cartita">
                 <img class="col-4" src="IMG/img-layouts-3.webp" alt="Card image cap">
-                <div class="card-body col-10">
+                <div class="card-body col-10 ml-5">
                   <h5 class="card-title">Robot quirúrgico realiza con éxito el primer trasplante de órgano totalmente automatizado</h5>
                   <p class="card-text">Cirujanos anuncian un hito médico histórico con el primer trasplante de órgano realizado por completo por un robot quirúrgico, marcando el inicio de una nueva era en la medicina.</p>
                 </div>
+                <div onclick="scrollOnArrow(2)" class="arrow-scroll animate__animated animate__pulse animate__infinite">
+                  <h4>Leer artículo</h4>
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
               </div>
-              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-row">
+              <div class="card col-xl-5 col-sm-10 col-10 d-flex flex-column cartita">
                 <img class="col-4" src="IMG/img-tecnologia-3.jpeg" alt="Card image cap">
-                <div class="card-body col-10">
+                <div id="card-bodys" class="card-body col-10 ml-5">
                   <h5 class="card-title">Científicos logran la teleportación cuántica de información a larga distancia por primera vez</h5>
                   <p class="card-text">Investigadores reportan un hito en la comunicación cuántica al lograr la teleportación exitosa de información cuántica a largas distancias, allanando el camino para la seguridad de la información y las comunicaciones cuánticas a nivel mundial.</p>
+                </div>
+                <div onclick="scrollOnArrow(3)" class="arrow-scroll animate__animated animate__pulse animate__infinite">
+                  <h4>Leer artículo</h4>
+                  <i class="fa-solid fa-arrow-down"></i> 
                 </div>
               </div>
             </div>
@@ -394,6 +410,39 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const arrowScroll = document.querySelectorAll("div.arrow-scroll > h4");
+      const arrowScrollI = document.querySelectorAll("div.arrow-scroll > i");
+      const cards = document.querySelectorAll("div.cartita > img");
+      let clicked = false;
+
+      if (cards != null) {
+        console.log("Cards encontradas");
+        console.log(cards);
+      }
+      else{
+        console.log("Cards no encontradas");
+      }
+
+      function scrollOnArrow(indexArrow) {
+        if (!clicked) {
+          cards[indexArrow].style.height = '0px';
+          console.log(clicked);
+          clicked = true;
+          arrowScroll[indexArrow].innerHTML = 'Subir';
+          arrowScrollI[indexArrow].style.rotate = '180deg';
+        }
+        else if (clicked) {
+          cards[indexArrow].style.height = '400px';
+            console.log(clicked);
+            clicked = false;
+          arrowScroll[indexArrow].innerHTML = 'Leer artículo';
+          arrowScrollI[indexArrow].style.rotate = '0deg';
+        }
+      }
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>

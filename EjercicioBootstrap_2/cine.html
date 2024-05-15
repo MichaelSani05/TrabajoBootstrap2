@@ -323,7 +323,7 @@
                   <h5 class="card-title">Investigadores desarrollan un algoritmo de inteligencia artificial capaz de predecir brotes de enfermedades</h5>
                   <p class="card-text">Científicos presentan un nuevo algoritmo de IA que utiliza datos epidemiológicos y de redes sociales para prever la propagación de enfermedades infecciosas, mejorando la capacidad de respuesta ante brotes de salud pública.</p>
                 </div>
-                <div class="arrow-scroll animate__animated animate__pulse animate__infinite">
+                <div onclick="scrollOnArrow(0)" class="arrow-scroll animate__animated animate__pulse animate__infinite">
                   <h4>Leer artículo</h4>
                   <i class="fa-solid fa-arrow-down"></i>
                 </div>
@@ -334,7 +334,7 @@
                   <h5 class="card-title">Compañía de automóviles anuncia planes para producir vehículos eléctricos con carga ultrarrápida</h5>
                   <p class="card-text">Descripción: Un fabricante de automóviles revela su estrategia para la próxima generación de vehículos eléctricos, que incluirá tecnología de carga ultrarrápida que reduce significativamente el tiempo de recarga de las baterías.</p>
                 </div>
-                <div class="arrow-scroll animate__animated animate__pulse animate__infinite">
+                <div onclick="scrollOnArrow(1)" class="arrow-scroll animate__animated animate__pulse animate__infinite">
                   <h4>Leer artículo</h4>
                   <i class="fa-solid fa-arrow-down"></i>
                 </div>
@@ -345,7 +345,7 @@
                   <h5 class="card-title">Robot quirúrgico realiza con éxito el primer trasplante de órgano totalmente automatizado</h5>
                   <p class="card-text">Cirujanos anuncian un hito médico histórico con el primer trasplante de órgano realizado por completo por un robot quirúrgico, marcando el inicio de una nueva era en la medicina.</p>
                 </div>
-                <div class="arrow-scroll animate__animated animate__pulse animate__infinite">
+                <div onclick="scrollOnArrow(2)" class="arrow-scroll animate__animated animate__pulse animate__infinite">
                   <h4>Leer artículo</h4>
                   <i class="fa-solid fa-arrow-down"></i>
                 </div>
@@ -425,7 +425,7 @@
           arrowScrollI[indexArrow].style.rotate = '180deg';
         }
         else if (clicked) {
-          cards[indexArrow].style.height = '300px';
+          cards[indexArrow].style.height = '400px';
             console.log(clicked);
             clicked = false;
           arrowScroll[indexArrow].innerHTML = 'Leer artículo';

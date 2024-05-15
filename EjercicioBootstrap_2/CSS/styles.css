@@ -7,7 +7,7 @@ body{
 }
 
 #real-main-content{
-  margin-top: 100px;
+  margin-top: 87px;
 }
 
 nav{
@@ -270,24 +270,18 @@ main{
 }
 
 .c {
-	width: 90%;
+	width: 100%;
 	height: auto;
-	min-height: 500px;
-	max-width: 1225px;
-
-  border-radius: 12px;
+	min-height: 600px;
   padding: 20px;
   padding-bottom: 40px;
   box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
   position: relative;
   overflow: hidden;
   background: hsl(0 0% 90%);
-
   box-sizing: border-box;
 }
 
@@ -411,7 +405,7 @@ input:not(:checked)+label+.ci {
 
 
 #cultura3 .card{
-  height: 300px;
+  height: 400px;
   overflow: scroll;
   scrollbar-width: none !important;
 }
