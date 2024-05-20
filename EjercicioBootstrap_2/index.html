@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pagina Deportes</title>
+    <title>MS NEWS - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/styles.css">
@@ -23,8 +23,8 @@
           <div id="display-menu" class="col-1 position-absolute">
             <i class="fa-solid fa-bars"></i>
           </div>
-          <div id="main-menu" class="col-xl-8 col-sm-10 col-12 justify-content-evenly align-items-center row">
-            <div class="dropdown col-lg-4 col-sm-3 col-10">
+          <div id="main-menu" class="col-xl-10 col-sm-10 col-12 justify-content-evenly align-items-center row">
+            <div class="dropdown col-lg-2 col-sm-3 col-10">
               <div class="wave"></div>
               <div class="wave"></div>
               <div class="wave"></div>
@@ -67,11 +67,11 @@
                 </ul>
                 
             </div>
-            <div class="dropdown col-lg-4 col-sm-3 col-10">
+            <div class="dropdown col-lg-2 col-sm-3 col-10">
               <div class="wave"></div>
               <div class="wave"></div>
               <div class="wave"></div>
-                <a href="#main-deportes">
+                <a href="deportes.html">
                   <div class="w-100 btn">
                     <span>Deportes</span>
                   </div>
@@ -110,11 +110,11 @@
                 </ul>
                 
             </div>
-            <div class="dropdown col-lg-4 col-sm-3 col-10">
+            <div class="dropdown col-lg-2 col-sm-3 col-10">
               <div class="wave"></div>
               <div class="wave"></div>
               <div class="wave"></div>
-              <a href="">
+              <a href="tecnologia.html">
                 <div class="w-100 btn">
                   <span>Tecnología</span>
                 </div>
@@ -142,11 +142,54 @@
                     </li>
                     <li class="submenu1-item">
                       <a class="dropdown-item" href="#">
-                        <span>Videojuegos</span>
+                        <span>Redes sociales</span>
                         <ul class="submenu2 submenu3">
-                          <li class="submenu2-item"><a href=""><span>GOTY</span></a></li>
-                          <li class="submenu2-item"><a href="">ESports</a></li>
-                          <li class="submenu2-item"><a href="">Consolas</a></li>
+                          <li class="submenu2-item"><a href=""><span>Influencers</span></a></li>
+                          <li class="submenu2-item"><a href="">Trends</a></li>
+                          <li class="submenu2-item"><a href="">Youtubers</a></li>
+                        </ul>
+                      </a>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="dropdown col-lg-2 col-sm-3 col-10">
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="wave"></div>
+                <a href="cultura.html">
+                  <div class="w-100 btn">
+                    <span>Videojuegos</span>
+                  </div>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu1-item">
+                      <a class="dropdown-item" href="cine.html">
+                        <span>Nuevos</span>
+                        <ul class="submenu2">
+                          <li class="submenu2-item"><a href="">Más jugados</a></li>
+                          <li class="submenu2-item"><a href="">Mejor valorados</a></li>
+                          <li class="submenu2-item"><a href="">Indies</a></li>
+                        </ul>
+                      </a>
+                    </li>
+                    <li class="submenu1-item item-arriba">
+                      <a class="dropdown-item" href="#">
+                        <span>Consolas</span>
+                        <ul class="submenu2">
+                          <li class="submenu2-item"><a href="">PlayStation</a></li>
+                          <li class="submenu2-item"><a href="">Xbox</a></li>
+                          <li class="submenu2-item"><a href="">Nintendo</a></li>
+                        </ul>
+                      </a>
+                    </li>
+                    <li class="submenu1-item">
+                      <a class="dropdown-item" href="#">
+                        <span>GOTY</span>
+                        <ul class="submenu2">
+                          <li class="submenu2-item"><a href=""><span>Ganadores</span></a></li>
+                          <li class="submenu2-item"><a href="">Nominados</a></li>
+                          <li class="submenu2-item"><a href="">Otros premios</a></li>
                         </ul>
                       </a>
                     </li>
@@ -504,14 +547,14 @@
         
         menuDisplayer.addEventListener('click', function(){
           if (!isMenuDisplayed){
-            menu.style.height = '234px';
+            menu.style.height = '334px';
             setTimeout(function() {
-              if (menu.style.height == '234px') {
+              if (menu.style.height == '334px') {
                 menu.style.overflow = 'visible';
               }
             }, 1000);
             isMenuDisplayed = true;
-            weatherContainer.style.marginTop = '350px';
+            weatherContainer.style.marginTop = '450px';
           } else{
             menu.style.height = '0px';
             menu.style.overflow = 'hidden';
