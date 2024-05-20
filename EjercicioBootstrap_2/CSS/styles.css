@@ -704,8 +704,6 @@ input:not(:checked)+label+.ci {
 
 /* ANIMACIONES */
 
-/* DISPLAY MENU */
-
 /* WAVE BACKGROUND */
 @keyframes gradient {
   0% {
@@ -766,5 +764,3 @@ input:not(:checked)+label+.ci {
       transform: translateX(1);
   }
 }
-
-/* CARRUSEL DE CARDS INFINITO */
